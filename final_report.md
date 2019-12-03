@@ -1,5 +1,6 @@
 ## ETL Final Report from Sam Cooper and Cherie Mosher
 
+
 **EXTRACT**
 
 
@@ -23,6 +24,10 @@
 
         https://plants.usda.gov/java/threat?fedlist=fed
 
+    * 4. We got a token for the IUCN API.  We pulled species and status for the United States into the app.py file.  The 'load' work was mainly done with the Glacier National Park data and the data from IUCN.  The IUCN data was downloaded using the app.py file and was saved as is into a mongo collection.
+
+        http://apiv3.iucnredlist.org/api/v3/country/getspecies/US?token={IUCN_token}
+
 
 **TRANSFORM**
 
@@ -40,4 +45,7 @@
 
     The goal was to store (a) the species in Glacier National Park and (b) the status (threatened or endangered) of potential species in the region.  
 
-    We transformed the final dataframes to json, making sure to orient as records.   
+    We transformed the final dataframes to json, making sure to orient as records.
+
+    We set up a mongo database for the data.  We loaded the Glacier National Park data into a collection and loaded the IUCN data into another collection.
+
