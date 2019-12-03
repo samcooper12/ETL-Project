@@ -1,0 +1,24 @@
+.cat {
+	color:red;
+	padding-left: 10px;
+	padding-right: 10px;
+	border: .5px solid red;
+	letter-spacing: .25px;
+	margin-left: 1px;
+	margin-right: 1px;
+}
+.item_name {
+	color:blue;
+	/*font-weight: 400;*/
+	padding-right: 5px;
+}
+
+li {
+	list-style: none;
+	padding-bottom: 3px;
+}
+
+body {
+	font-size: 18px;
+	text-transform: capitalize;
+}
