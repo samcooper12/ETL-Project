@@ -110,7 +110,7 @@ def api_resp():
 @app.route("/plants")
 def plants():
 	# glacier_plants = db.joined_frames.find({"taxon_group":"Mammal"},{"_id":0, "commonname":1, "scientificname":1,})
-	glacier_plants = db.joined_frames.find({"taxongroup":"Vascular Plant"},{"_id":0, "common_name":1, "scientific_name":1,"category":1})
+	glacier_plants = db.joined_frames.find({"taxon_group":"Vascular Plant"},{"_id":0, "common_name":1, "scientific_name":1,"category":1})
 	return render_template("results.html", list=glacier_plants)
 
  
@@ -123,23 +123,23 @@ def mammals():
 
 @app.route("/birds")
 def birds():
-	glacier_birds = db.joined_frames.find({"taxongroup":"Bird"},{"_id":0, "common_name":1, "scientific_name":1,"category":1})
+	glacier_birds = db.joined_frames.find({"taxon_group":"Bird"},{"_id":0, "common_name":1, "scientific_name":1,"category":1})
 	return render_template("results.html", list=glacier_birds)
 
 @app.route("/fish")
 def fish():
-	glacier_fish = db.joined_frames.find({"taxongroup":"Fish"},{"_id":0, "common_name":1, "scientific_name":1, "category":1})
+	glacier_fish = db.joined_frames.find({"taxon_group":"Fish"},{"_id":0, "common_name":1, "scientific_name":1, "category":1})
 	return render_template("results.html", list=glacier_fish)
 
 
 @app.route("/amphibians")
 def amphibians():
-	glacier_amphibians = db.joined_frames.find({"taxongroup":"Amphibian"},{"_id":0, "common_name":1, "scientific_name":1,"category":1})
+	glacier_amphibians = db.joined_frames.find({"taxon_group":"Amphibian"},{"_id":0, "common_name":1, "scientific_name":1,"category":1})
 	return render_template("results.html", list=glacier_amphibians)
 
 @app.route("/reptiles")
 def reptiles():
-	glacier_reptiles = db.joined_frames.find({"taxongroup":"Reptile"},{"_id":0, "common_name":1, "scientific_name":1,"category":1})
+	glacier_reptiles = db.joined_frames.find({"taxon_group":"Reptile"},{"_id":0, "common_name":1, "scientific_name":1,"category":1})
 	return render_template("results.html", list=glacier_reptiles)
 
 if __name__ == '__main__':
