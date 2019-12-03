@@ -40,12 +40,19 @@
 
     We saved the excel spreadsheet of species in Glacier National Park as a csv file.  We cleaned up the data by importing the csv file into a jupyter notebook using pandas.  We removed columns with data that was unimportant to us and we changed the name of a few columns so they were similar to the threatened/endangered dataframe.  We saved the final dataframe to a csv file.
 
+    * We merged the data from the IUCN API with the data for Glacier National Park using pandas.  We made sure to retain any species from the Glacier data that did not have a status from IUCN.
+
 
 **LOAD**
 
-    The goal was to store (a) the species in Glacier National Park and (b) the status (threatened or endangered) of potential species in the region.  
+    The goal was to store (a) the species in Glacier National Park and (b) the status (threatened or endangered) of the species in that park.
 
-    We transformed the final dataframes to json, making sure to orient as records.
 
-    We set up a mongo database for the data.  We loaded the Glacier National Park data into a collection and loaded the IUCN data into another collection.
+    We transformed the final dataframe to json, making sure to orient as records.
+
+
+    We set up a mongo database for the data.  We loaded the Glacier National Park data (with IUCN status) inta a collection.  
+    
+
+    The goal is to use flask to render a web application that allows users to filter species in Glacier National Park by taxonomic group and status/category.
 
